@@ -108,7 +108,19 @@ public class Rates {
             JSONObject json = new JSONObject();
             JSONObject rates = new JSONObject();            
             
-            /* 
+            String[] header = iterator.next();
+            
+            while(iterator.hasNext()){
+                row = iterator.next();
+                rates.put(row[1], Double.parseDouble(row[2]));
+                
+            }
+            json.put("rates", rates);
+            json.put("base", "USD");
+            json.put("date", "09-20-2019");
+            
+            
+                /* 
              * Add rate data to "rates" container and add "date" and "base"
              * values to "json" container.  See the "getRatesAsTable()" method
              * for an example of how to get the CSV data from the list, and
@@ -117,7 +129,7 @@ public class Rates {
              * *** INSERT YOUR CODE HERE ***
              */
             
-            json.put("rates", rates);
+            //json.put("rates", rates);
             
             /* Parse top-level container to a JSON string */
             

@@ -17,6 +17,25 @@ var Lab4 = ( function() {
              */
 
             // INSERT YOUR CODE HERE
+            
+            var output = "<p>";
+            
+            var ratesList = rates["rates"];
+            var dollars = $("#input").val();
+            
+            for ( var code in ratesList ) {
+                var rate = ratesList[code];
+                /*this is like the number guessing game code
+                 * get input and multiply it by the rates
+                 * the append the list*/
+                output += code + ": " + (rate * dollars).toFixed(2) + "<br />";
+                
+                
+            }
+            
+            output += "</p>";
+            
+            $("#output").html(output);
 
         },
         
